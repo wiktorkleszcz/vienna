@@ -4,19 +4,9 @@ const popUps = document.querySelectorAll('.pop-up')
 
 const background = document.querySelector('.pop-up_background')
 const xMarks = document.querySelectorAll('.fa-xmark')
+const hamburger = document.querySelector('.hamburger')
+const navBar = document.querySelector('nav')
 
-function scrollToSection() {
-    window.scrollTo(0 ,document.querySelector('#one').offsetTop);
-}
-
-window.addEventListener('load', (event) => {
-    const wienAnchor = document.querySelector('h1');
-  
-    wienAnchor.addEventListener('click', (event) => {
-      const wienSection = document.getElementById('one');
-      wienSection.scrollIntoView({behavior: 'smooth'});
-    });
-});
 
 imgs.forEach(img => {
   img.addEventListener('click', e => {
@@ -47,18 +37,22 @@ xMarks.forEach(xMark => {
   
 })
 
+window.addEventListener('scroll', e => {
+    e.preventDefault();
 
-// get the header element
-const header = document.querySelector('header');
+    console.log(huj);
+})
 
-// listen for the scroll event on the window object
-window.addEventListener('scroll', () => {
-  // check if the user has scrolled more than 100px from the top
-  if (window.scrollY > 100) {
-    // add the "header-visible" class to the header element
-    header.classList.add('header-visible');
+hamburger.addEventListener('click', () => {
+  if (body.classList.contains('scrolllock')) {
+      body.classList.remove('scrolllock')
+      hamburger.classList.remove('fa-xmark')
+      hamburger.classList.add('fa-bars')
+      navBar.classList.remove('active')
   } else {
-    // remove the "header-visible" class from the header element
-    header.classList.remove('header-visible');
+      body.classList.add('scrolllock')
+      hamburger.classList.remove('fa-bars')
+      hamburger.classList.add('fa-xmark')
+      navBar.classList.add('active')
   }
-});
+})

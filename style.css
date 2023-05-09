@@ -16,29 +16,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Bogart', sans-serif;
     scroll-behavior: smooth;
+    font-family: 'Noto Sans Mono', monospace;
   }
 
   body {
     height: 100%;
     overflow-y: hidden;
     color: #fff;
-    background-color: rgb(33, 33, 33);
+    background-color: var(--dark_purple);
   }
 
-  ::-webkit-scrollbar {
+  .container::-webkit-scrollbar {
     width: 1rem;
     border-radius: 0.5rem;
   }
 
-  ::-webkit-scrollbar-track {
-    background-color: #111827;
+  .container::-webkit-scrollbar-track {
+    background-color: var(--darkest_purple);
     border-radius: 0.5rem;
   }
 
-  ::-webkit-scrollbar-thumb {
-    background-color: #00b4d8;
+  .container::-webkit-scrollbar-thumb {
+    background-color: var(--md_purple);
     border-radius: 0.5rem;
   }
 
@@ -48,13 +48,13 @@
   }
 
   section {
-    height: 100vh;
+    height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
     scroll-snap-align: start;
-    background-color: rgb(33, 33, 33);
+    background-color: var(--dark_purple);
   }
 
   header {
@@ -62,16 +62,40 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--medium_purple);
-    position: fixed;
+    background-color: var(--darkest_purple);
+    position: relative;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
     height: 5vh;
     z-index: 1;
-    opacity: 0;
-    transform: translateY(-100%);
+    opacity: 1;
+    transform: translateY(0);
     transition: all 0.3s ease-in-out;
+    padding: 2rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 37.5rem;
+  }
+
+  a {
+    color: #fff;
+    transition: 0.2s ease-in-out;
+  }
+
+  a:hover {
+    color: var(--white);
+  }
+  
+  .know_more {
+    color: var(--white);
+    font-style: italic;
   }
 
   .header-visible {
@@ -80,7 +104,7 @@
   }
 
   .container {
-    height: 100vh;
+    height: 95vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
   }
@@ -92,7 +116,7 @@
     align-items: center;
     height: 90vh;
     width: 62.5vw;
-    background-color: #1F2937;
+    background-color: var(--darker_purple);
     border-radius: 2rem;
     transition: 0.2s;
   }
@@ -119,11 +143,21 @@
     border-radius: 2rem;
   }
 
+  .img:hover {
+    scale: 1.05;
+    animation: img 0.2s ease-in-out;
+  }
+
   .description {
     width: 100%;
     height: 39vh;
-    background-color: #111827;
+    background-color: var(--darkest_purple);
     border-radius: 2rem;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2vh;
   }
 
   .pop-up_background {
@@ -148,7 +182,7 @@
     display: none;
     height: 58.5rem;
     width: 48rem;
-    background-color: #1F2937;
+    background-color: var(--darkest_purple);
     border-radius: 2rem;
     z-index: 1;
   }
@@ -178,7 +212,7 @@
     position: relative;
     height: 31.5rem;
     width: 48rem;
-    background-color: #111827;
+    background-color: var(--darkest_purple);
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
   }
@@ -190,7 +224,7 @@
     position: relative;
     height: 29.5rem;
     width: 48rem;
-    background-color: #111827;
+    background-color: var(--darkest_purple);
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     padding: 2rem;
@@ -209,7 +243,7 @@
   }
 
   .pop-up_description::-webkit-scrollbar-thumb {
-    background-color: #00b4d8;
+    background-color: var(--md_purple);
     border-radius: 0.25rem;
   }
 
@@ -226,8 +260,20 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 95vh;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+#foot {
+  height: 47.5vh;
+}
+
+li {
+  margin: 2vh;
+}
+
+h2 {
+  font-family:'Bogart', sans-serif;
 }
 
 h1 {
@@ -236,6 +282,7 @@ h1 {
   position: relative; 
   cursor: pointer;
   transition: all 0.3s;
+  font-family:'Bogart', sans-serif;
 }
 
 
@@ -252,7 +299,7 @@ h1::after {
 
 
 h1:hover::after {
-  background-color: #00b4d8;
+  background-color: var(--ml_purple);
   width: 100%;
   animation-name: underline;
   animation-duration: 0.3s;
@@ -261,7 +308,7 @@ h1:hover::after {
   
 
 h1:hover {
-    color: #00b4d8;
+    color: var(--ml_purple);
     transition: 0.3s ease-in-out;
 }
 
@@ -272,7 +319,7 @@ h1:not(:hover)::after {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: #00b4d8;
+  background-color: var(--ml_purple);
   animation-name: underline-reverse;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
@@ -283,7 +330,11 @@ a {
   text-decoration: none;
 }
 
-.fa-xmark {
+i.hamburger {
+  display: none;
+}
+
+.pop-up_icon {
   position: absolute;
   top: 2rem;
   right: 2rem;
@@ -294,8 +345,8 @@ a {
   cursor: pointer;
 }
 
-.fa-xmark:hover {
-  color: #00b4d8;
+.pop-up_icon:hover {
+  color: var(--medium_purple);
   transition: all 0.2s ease-in-out;
 }
 
