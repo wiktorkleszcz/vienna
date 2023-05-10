@@ -357,10 +357,15 @@
 }
 
 #foot {
-  width: 100%;
+  width: 100vw;
   height: 47.5vh;
   background-color: var(--darkest_purple);
-  font-size: 1vh;
+  padding: 1.5vh;
+}
+
+#foot p {
+  font-size: 1.5vh;
+  max-width: 80%;
 }
 
 h2 {
