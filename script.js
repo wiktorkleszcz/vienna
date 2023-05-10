@@ -69,26 +69,6 @@ closeBtns.forEach(closeBtn => {
   })
 })
 
-window.addEventListener('scroll', e => {
-    e.preventDefault();
-
-    console.log(huj);
-})
-
-/*hamburger.addEventListener('click', () => {
-  if (body.classList.contains('scrolllock')) {
-      body.classList.remove('scrolllock')
-      hamburger.classList.remove('fa-xmark')
-      hamburger.classList.add('fa-bars')
-      navBar.classList.remove('active')
-  } else {
-      body.classList.add('scrolllock')
-      hamburger.classList.remove('fa-bars')
-      hamburger.classList.add('fa-xmark')
-      navBar.classList.add('active')
-  }
-})*/
-
 const timelineItems = document.querySelectorAll('.timeline-item');
 
 timelineItems.forEach((item, index) => {
