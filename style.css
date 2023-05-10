@@ -38,7 +38,7 @@
   }
 
   .container::-webkit-scrollbar-thumb {
-    background-color: var(--md_purple);
+    background-color: var(--ml_purple);
     border-radius: 0.5rem;
   }
 
@@ -158,10 +158,11 @@
     flex-direction: column;
     justify-content: space-around;
     gap: 2vh;
+    font-size: 1.5vh;
   }
 
   #timeline {
-    background-color: var(--darker_purple);
+    background-color: var(--dark_purple);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -189,25 +190,30 @@
   .timeline-date {
     background-color: var(--medium_purple);
     color: #fff;
-    font-size: 1.75vh;
+    font-size: 1.5vh;
     font-weight: 700;
     text-align: center;
-    width: 11vh;
-    height: 11vh;
+    width: 9vh;
+    height: 9vh;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     margin-right: 20px;
+    pointer-events: none;
   }
   
   .timeline-content {
     display: flex;
-    position: relative;
     flex-direction: column;
     max-width: 800px;
     font-size: 0.75rem;
     height: 12vh;
+  }
+
+  .timeline-content.active {
+    display: flex;
+    animation: pop-up 0.2s ease-out forwards;
   }
   
   .timeline-content h3 {
@@ -252,15 +258,6 @@
   .active {
     display: flex;
     animation: pop-up 0.2s ease-out forwards;
-  }
-
-  .timeline-content.active {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    max-width: 800px;
-    font-size: 0.75rem;
-    height: 12vh;
   }
 
   .img-container {
@@ -346,6 +343,7 @@ li {
 
 h2 {
   font-family:'Bogart', sans-serif;
+  font-size: 2.5rem;
 }
 
 h1 {
