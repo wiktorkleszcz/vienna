@@ -238,6 +238,7 @@
     background-color: var(--darkest_purple);
     border-radius: 0vh;
     z-index: 1;
+    padding: 3vh;
   }
   
   .timeline-content h3 {
