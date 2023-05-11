@@ -69,16 +69,6 @@ closeBtns.forEach(closeBtn => {
   })
 })
 
-const timelineItems = document.querySelectorAll('.timeline-item');
-
-timelineItems.forEach((item, index) => {
-  if (index % 2 === 0) {
-    item.classList.add('timeline-item-left');
-  } else {
-    item.classList.add('timeline-item-right');
-  }
-});
-
 window.addEventListener( 'load', function () {
   setTimeout( function () {
   window.scrollTo( 0, 1 );
