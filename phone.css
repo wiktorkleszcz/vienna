@@ -299,7 +299,7 @@
 
   .pop-up_img {
     position: relative;
-    height: 56.25vw;
+    height: 56.25vh;
     width: 100vw;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -308,6 +308,7 @@
   .pop-up_text {
     position: relative;
     width: 100vw;
+    height: 70vh;
     background-color: var(--darkest_purple);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
