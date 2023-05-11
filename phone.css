@@ -202,11 +202,14 @@
     padding: 2vh;
     gap: 2vh;
   }
+
+  .timeline-container h2 {
+    font-size: 2.5rem;
+  }
   
   .timeline-item {
     display: flex;
     flex-direction: row;
-    height: 19vw;
   }
   
   .timeline-date {
