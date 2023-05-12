@@ -48,9 +48,6 @@ xMarks.forEach(xMark => {
       popup.classList.remove('active');
     });
 
-
-    
-    
     background.style.display = 'none'
   })
 })
@@ -62,9 +59,6 @@ closeBtns.forEach(closeBtn => {
       content.classList.remove('active');
     });
 
-
-    
-    
     background.style.display = 'none'
   })
 })
